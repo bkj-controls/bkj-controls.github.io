@@ -37,10 +37,10 @@
 </head>
 
 <body onload="getConfig()">
-	<div w3-include-html="header.htm"></div>
+	<div w3-include-html="header.html"></div>
 	<div class="topnav">
-		<a href="index.htm">Overview</a>
-		<a href="settings.htm" class="active">Settings</a>
+		<a href="index.html">Overview</a>
+		<a href="settings.html" class="active">Settings</a>
 	</div>
 	<div class="column">
 		<form action="/setTime" method="POST">
@@ -53,6 +53,7 @@
 				<br><label>Password</label>
 				<input type="password" id="setPWD" name="setPWD" maxlength="32" size="16" placeholder="password">
 				<label> Enter password before clicking WiFi Settings</label>
+				<br><label>Hostname</label>
 				<br><label>Hostname</label>
 				<input type="text" id="setmyName" maxlength="16" size="16" name="setmyName" placeholder="hostname">
 				<input type="button" class="button" align="right" value="Save" onclick="mySsidButton()">
