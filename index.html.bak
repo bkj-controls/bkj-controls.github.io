@@ -5,7 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="styles.css">
-	<link rel = "icon" href = "images/favicon.icon"  type = "image/x-icon">
 	<title>BKJ Controls</title>
 	<script src="bkjts.js"></script>
 	<script>
@@ -37,6 +36,30 @@
 		}
 
 
+
+		//function getStateIndex() {
+		//getConfig("requestStatus", function(data) {
+		function updateFields(data) {
+			var disp_ssid, disp_hostname, disp_mac, disp_rLED, disp_aLED, disp_gLED, disp_buzzer;
+
+			disp_ssid = data.tsSsid;
+			disp_hostname = data.tsName;
+			disp_mac = data.tsMAC;
+			disp_rLED = data.rLEDstate;
+			disp_aLED = data.aLEDstate;
+			disp_gLED = data.gLEDstate;
+			disp_buzzer = data.buzzerSTATE;
+
+			document.getElementById("showSSID").innerHTML = disp_ssid;
+			document.getElementById("showHostname").innerHTML = disp_hostname;
+			document.getElementById("showMAC").innerHTML = disp_mac;
+			document.getElementById("showrLEDstate").innerHTML = disp_rLED;
+			document.getElementById("showaLEDstate").innerHTML = disp_aLED;
+			document.getElementById("showgLEDstate").innerHTML = disp_gLED;
+			document.getElementById("showBuzzerState").innerHTML = disp_buzzer;
+
+
+		}
 	</script>
 </head>
 
